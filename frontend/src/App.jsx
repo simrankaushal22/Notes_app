@@ -6,13 +6,15 @@ import CreateNote from "./pages/CreateNote";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col"> {/* ✅ FULL HEIGHT */}
+    <div className="min-h-screen flex flex-col"> {/* FULL HEIGHT */}
 
       {/* Navbar */}
       <NavBar />
 
       {/* Main content */}
-      <main className="flex-grow px-4 py-4"> {/* ✅ PUSHES FOOTER DOWN */}
+      <main className=".flex-grow {
+    flex-grow: 1;
+}"> {/*PUSHES FOOTER DOWN */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateNote />} />
