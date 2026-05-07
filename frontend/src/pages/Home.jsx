@@ -6,7 +6,7 @@ function Home() {
   const { notes, loading, deleteNote, updateNote } = useContext(NoteContext);
   const navigate = useNavigate();
 
-  // 🔄 Loading state
+  //  Loading state
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[70vh]">
@@ -17,12 +17,12 @@ function Home() {
     );
   }
 
-  // 📭 Empty state
+  // Empty state
   if (!notes || notes.length === 0) {
     return (
       <div className="flex flex-col justify-center items-center h-[70vh]">
         <h1 className="text-2xl text-gray-500 mb-4">
-          No notes found 😢
+          No notes found 
         </h1>
 
         <button
@@ -35,7 +35,7 @@ function Home() {
     );
   }
 
-  // ✅ Update handler
+  // Update handler
   const handleUpdate = (note) => {
     const newTitle = prompt("Enter new title", note.title);
     const newContent = prompt("Enter new content", note.content);
